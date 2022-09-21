@@ -1,0 +1,167 @@
+1) Command for “Look where I am”
+
+pwd
+
+2)Create folder-
+
+ ~$ mkdir homework
+
+3) Enter to the folder -
+~$ cd homework
+
+4) Create 3 folders -
+~/homework$ mkdir hw1 hw2 hw3
+
+5) Enter to any folder -
+
+~/homework$ cd hw1
+
+6) Create 5 files (3 txt, 2 json) -
+~/homework/hw1$ touch work1.txt work2.txt work2.txt home.json home.json
+
+7) Create 3 folders  -
+~/homework$ mkdir hw1 hw2 hw3
+
+8. List the contents of the folder
+
+~/homework/hw1$ ls -la
+total 8
+drwxrwxr-x 2 olena olena 4096 кві 14 15:23 .
+drwxrwxr-x 5 olena olena 4096 кві 14 15:17 ..
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 home1.json
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 home.json
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 work1.txt
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 work2.txt
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 work3.txt
+
+9) + Open any txt file  -
+~/homework/hw1$ cat work1.txt
+
+10) + write  some text. -
+~/homework/hw1$ cat >> work1.txt
+
+Hello!!!
+How are you??? 
+^C
+
+11) +save and exit.
+
+
+12) Exit the folder to the upper level
+ -
+~/homework/hw1$ cd ../
+~/homework$ 
+
+
+
+13) move any 2 files you created to any other folder
+. - 
+
+~/homework$ mv hw1/home.json hw2/home.json
+~/homework$ mv hw1/home1.json hw2/home1.json
+
+olena@lenovoadmin-Lenovo-V15-ADA:~/homework$ cd hw2
+olena@lenovoadmin-Lenovo-V15-ADA:~/homework/hw2$ ls -la
+total 8
+drwxrwxr-x 2 olena olena 4096 кві 14 16:02 .
+drwxrwxr-x 5 olena olena 4096 кві 14 15:17 ..
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 home1.json
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 home.json
+olena@lenovoadmin-Lenovo-V15-ADA:~/homework/hw2$ 
+
+14)copy any 2 files you created to any other folder.
+
+~/homework$ cp  hw1/work1.txt  hw2/work1.txt
+~/homework$ cp  hw1/work2.txt  hw2/work2.txt
+~/homework$ cd hw2
+~/homework/hw2$ ls -la
+total 12
+drwxrwxr-x 2 olena olena 4096 кві 14 16:08 .
+drwxrwxr-x 5 olena olena 4096 кві 14 15:17 ..
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 home1.json
+-rw-rw-r-- 1 olena olena    0 кві 14 15:23 home.json
+-rw-rw-r-- 1 olena olena   24 кві 14 16:08 work1.txt
+-rw-rw-r-- 1 olena olena    0 кві 14 16:08 work2.txt
+
+15)Find a file by name
+
+~$ find homework/ -name "*rk*"
+homework/
+homework/hw1/work3.txt
+homework/hw1/work2.txt
+homework/hw1/work.txt
+homework/hw1/work1.txt
+homework/hw2/work2.txt
+homework/hw2/work1.txt
+
+~$ find homework/ -name "*home*"
+homework/
+homework/hw2/home.json
+homework/hw2/home1.json
+
+~$ find homework/ -name "*work*"
+homework/
+homework/hw1/work3.txt
+homework/hw1/work2.txt
+homework/hw1/work.txt
+homework/hw1/work1.txt
+homework/hw2/work2.txt
+homework/hw2/work1.txt
+
+16) view content in real time (grep command) and learn how it works.
+
+~/homework/hw2$ cat work2.txt
+8 Ways to Keep Your Knowledge and Skills Current
+    Take Professional Development Courses. 
+Use Online Resources
+Attend Professional Events    Network Online. ...
+    Invest in Continuing Education and Certifications. ...
+    Follow Thought Leaders on Social Media. ...
+    Read White Papers and Case Studies. ...
+    Determine Hard and Soft Skills to Develop.
+ 
+ ~/homework/hw2$ grep -i skills work2.txt
+
+8 Ways to Keep Your Knowledge and Skills Current
+    Determine Hard and Soft Skills to Develop.
+
+~/homework/hw2$ grep -ic skills work2.txt
+2
+~/homework/hw2$ grep -i 'skills' work2.txt
+
+8 Ways to Keep Your Knowledge and Skills Current
+    Determine Hard and Soft Skills to Develop.
+
+~/homework/hw2$ grep -ic skills work2.txt
+2
+
+17) output several first lines from a text file
+
+~/homework/hw2$ cat work2.txt
+8 Ways to Keep Your Knowledge and Skills Current
+    Take Professional Development Courses. 
+Use Online Resources
+Attend Professional Events    Network Online. ...
+    Invest in Continuing Education and Certifications. ...
+    Follow Thought Leaders on Social Media. ...
+    Read White Papers and Case Studies. ...
+    Determine Hard and Soft Skills to Develop.
+    
+~/homework/hw2$ head -3 work2.txt
+
+8 Ways to Keep Your Knowledge and Skills Current
+    Take Professional Development Courses. 
+Use Online Resources
+
+18)output the last few lines from the text file
+
+~/homework/hw2$ tail -3 work2.txt
+    Read White Papers and Case Studies. ...
+    Determine Hard and Soft Skills to Develop.
+
+
+
+19)display the date and time
+
+~$ date
+п'ятниця, 15 квітня 2022 00:17:46 +0300
